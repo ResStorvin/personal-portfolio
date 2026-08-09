@@ -18,8 +18,8 @@ export default function Navbar() {
       <div
         className="w-full rounded-2xl px-8 py-4 backdrop-blur-md transition-all duration-300"
         style={{
-          background: "rgba(80, 20, 20, 0.7)",
-          border: "1px solid rgba(255, 100, 50, 0.2)",
+          background: "#1E2A3A",
+          border: "1px solid #2C3A4F",
         }}>
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
@@ -46,11 +46,6 @@ export default function Navbar() {
               className="text-gray-300 hover:text-white transition-colors duration-200 font-light">
               Skills
             </Link>
-            {/* <Link
-              href="#contact"
-              className="text-gray-300 hover:text-white transition-colors duration-200 font-light">
-              Contact
-            </Link> */}
           </div>
 
           {/* CTA Button */}
@@ -59,7 +54,7 @@ export default function Navbar() {
               const element = document.getElementById("contact");
               element?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-6 py-2 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-white transition-colors duration-200">
+            className="px-6 py-2 bg-gray-100 text-[#1B2430] rounded-full font-medium hover:bg-white transition-colors duration-200">
             Contact Me
           </button>
         </div>
