@@ -1,18 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll event to add extra styling when scrolled
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
+  useEffect(() => {
+    const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-    });
-  }
+    };
 
+    // Set the initial state in case the page isn't at the top.
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
       <div
