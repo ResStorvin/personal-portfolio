@@ -43,7 +43,8 @@ export function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative z-20 min-h-[115vh] w-full overflow-x-hidden bg-[#0D1320] px-6"
+      // className="relative z-20 min-h-[115vh] w-full overflow-x-hidden bg-[#0D1320] px-6"
+      className="relative z-20 min-h-[220vh] w-full overflow-x-clip bg-[#0D1320] px-6"
       style={{
         backgroundImage:
           "radial-gradient(circle, rgba(58, 70, 92, 0.48) 1px, transparent 1px)",
