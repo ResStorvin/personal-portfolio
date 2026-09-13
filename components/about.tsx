@@ -43,7 +43,6 @@ export function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      // className="relative z-20 min-h-[115vh] w-full overflow-x-hidden bg-[#0D1320] px-6"
       className="relative z-20 min-h-[220vh] w-full overflow-x-clip bg-[#0D1320] px-6"
       style={{
         backgroundImage:
