@@ -137,8 +137,8 @@ export function AboutSection() {
           </p>
 
           <p className="mx-auto mt-12 max-w-3xl text-lg leading-relaxed text-[#94A3B8] md:text-2xl">
-            With a focus on user-centered design and clean code, i think this is
-            the part which is happening error
+            With a focus on user-centered design and clean code, I help bring
+            visions to life.
           </p>
 
           <div
