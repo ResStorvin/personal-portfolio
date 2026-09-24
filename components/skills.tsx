@@ -1,31 +1,44 @@
-const skills = [
-  "Design",
-  "Development",
-  "Strategy",
-  "UX/UI",
-  "Frontend",
-  "Backend",
+const categories = [
+  {
+    number: "01",
+    title: "Frontend",
+    description:
+      "Building responsive and accessible user interfaces with modern frameworks and styling.",
+    skills: [
+      ["React", "⚛"],
+      ["Next.js", "N"],
+      ["TypeScript", "TS"],
+      ["HTML", "5"],
+      ["CSS", "#"],
+      ["Tailwind CSS", "≈"],
+    ],
+  },
+  {
+    number: "02",
+    title: "Backend",
+    description:
+      "Working with server-side technologies, APIs and databases to build functional web applications.",
+    skills: [
+      ["Node.js", "◈"],
+      ["Express", "ex"],
+      ["PostgreSQL", "P"],
+      ["MongoDB", "◆"],
+    ],
+  },
+  {
+    number: "03",
+    title: "Tools & Others",
+    description:
+      "Using essential tools to streamline my workflow and improve productivity.",
+    skills: [
+      ["Git", "◆"],
+      ["GitHub", "●"],
+      ["Figma", "F"],
+      ["VS Code", "⌘"],
+      ["Terminal", ">_"],
+      ["Docker", "▰"],
+    ],
+  },
 ];
 
-export function SkillsSection() {
-  return (
-    <section
-      id="skills"
-      className="relative z-10 flex min-h-screen w-full items-center justify-center bg-gray-900 px-6 py-32">
-      <div className="w-full max-w-3xl">
-        <h2 className="mb-12 text-center font-serif text-5xl font-light text-white">
-          Skills
-        </h2>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="rounded-lg bg-gray-800 p-6 text-center text-gray-300 transition-colors hover:text-white">
-              {skill}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+const learningSkills = ["Prisma", "AWS", "PostgreSQL", "Supabase", "Framer"];
