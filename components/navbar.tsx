@@ -21,7 +21,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-4">
       <div
         className="w-full rounded-2xl px-8 py-4 backdrop-blur-md transition-all duration-300"
         style={{

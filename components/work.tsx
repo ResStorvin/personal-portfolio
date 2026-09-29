@@ -89,7 +89,7 @@ export function WorkSection() {
                 </div>
               </div>
               <div className="overflow-hidden rounded-xl border border-[#294261] bg-[#0D1B2C] p-2">
-                <div className="flex aspect-[4/3] flex-col rounded-lg border border-[#294261] bg-[#071321] p-4">
+                <div className="flex aspect-4/3 flex-col rounded-lg border border-[#294261] bg-[#071321] p-4">
                   <div className="flex items-center justify-between border-b border-[#294261] pb-3 font-mono text-[8px] uppercase tracking-[0.16rem] text-[#CFA50E]">
                     <span>Your Portfolio</span>
                     <span>About&nbsp;&nbsp; Work&nbsp;&nbsp; Skills</span>
