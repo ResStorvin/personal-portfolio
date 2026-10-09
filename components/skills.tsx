@@ -24,7 +24,7 @@ export function SkillsSection() {
           {skillCards.map((title, index) => (
             <article
               key={title}
-              className="group relative -ml-5 h-[calc(100vh-270px)] min-h-[390px] w-[240px] shrink-0 overflow-hidden px-5 pb-8 pt-20 text-[#F5F5F5] transition-transform duration-300 ease-out first:ml-0 hover:z-20 hover:-translate-y-8 md:h-[440px] md:w-[260px] md:px-6"
+              className="group relative -ml-6 h-[calc(100vh-250px)] min-h-[405px] w-[232px] shrink-0 overflow-hidden px-5 pb-8 pt-20 text-[#F5F5F5] transition-transform duration-300 ease-out first:ml-0 hover:z-20 hover:-translate-y-8 md:h-[450px] md:w-[250px] md:px-6"
               style={{ zIndex: index }}>
               <svg
                 className="pointer-events-none absolute inset-0 h-full w-full"
@@ -35,12 +35,11 @@ export function SkillsSection() {
                   d="M 0 23 Q 0 19 4 17 L 96 0 Q 100 0 100 4 L 100 100 L 0 100 Z"
                   fill="#202020"
                   stroke="#4B4B4B"
-                  strokeWidth="0.7"
+                  strokeWidth="1.5"
                   vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <div
-                // className="absolute right-5 top-7 flex h-7 w-7 items-center justify-center font-serif text-xl md:right-7 md:top-9"
                 className="absolute right-5 top-7 z-10 flex h-7 w-7 items-center justify-center font-serif text-xl md:right-7 md:top-9"
                 aria-hidden="true">
                 <svg
@@ -52,7 +51,6 @@ export function SkillsSection() {
                   <path d="M3.8 12h16.4M5.5 7.5h13M5.5 16.5h13M12 3.5c2.3 2.3 3.4 5.1 3.4 8.5s-1.1 6.2-3.4 8.5c-2.3-2.3-3.4-5.1-3.4-8.5S9.7 5.8 12 3.5Z" />
                 </svg>
               </div>
-              {/* <div className="flex h-full items-end"> */}
               <div className="relative z-10 flex h-full items-end">
                 <h3 className="font-serif text-[1.7rem] italic leading-none md:text-[2rem]">
                   {title}
