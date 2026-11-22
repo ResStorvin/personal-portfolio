@@ -78,6 +78,8 @@ const skillGroups: SkillGroup[] = [
 ];
 
 export function SkillsSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeGroup = skillGroups[activeIndex];
   return (
     <section
       id="skills"
@@ -114,7 +116,41 @@ export function SkillsSection() {
           <div
             role="tablist"
             aria-label="Skill categories"
-            className="relative grid grid-cols-4 border-b border-[#26303e]"></div>
+            className="relative grid grid-cols-4 border-b border-[#26303e]">
+            {skillGroups.map((group, index) => {
+              const isActive = index === activeIndex;
+              return (
+                <button
+                  key={group.title}
+                  id={`skills-tab-${index}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="skills-panel"
+                  onClick={() => setActiveIndex(index)}
+                  onKeyDown={(event) => {
+                    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft")
+                      return;
+                    event.preventDefault();
+                    const direction = event.key === "ArrowRight" ? 1 : -1;
+
+                    const nextIndex =
+                      (index + direction + skillGroups.length) %
+                      skillGroups.length;
+                    setActiveIndex(nextIndex);
+                    document.getElementById(`skills-tab-${nextIndex}`)?.focus();
+                  }}
+                  className={`min-h-14 min-w-0 px-1 pb-3 pt-2 text-center font-serif text-sm transition-colors md:text-[1.35rem] ${isActive ? "text-white" : "text-[#9aa6b7] hover:text-white"}`}>
+                  {group.title}
+                </button>
+              );
+            })}
+            <span
+              aria-hidden="true"
+              className="absolute bottom-[-1px] left-0 h-[3px] w-1/4 bg-[#f2b126] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+              style={{ transform: `translateX(${activeIndex * 100}%)` }}
+            />
+          </div>
         </div>
       </div>
     </section>
