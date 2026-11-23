@@ -77,6 +77,22 @@ const skillGroups: SkillGroup[] = [
   },
 ];
 
+function SkillMark({ skill }: { skill: Skill }) {
+  const Icon = skill.icon;
+
+  if (skill.mark) {
+    return (
+      <span
+        aria-hidden="true"
+        className="grid size-10 place-items-center rounded-full border-2 border-current text-xl font-semibold leading-none">
+        {skill.mark}
+      </span>
+    );
+  }
+
+  return <Icon aria-hidden="true" className="size-10 stroke-[1.7]" />;
+}
+
 export function SkillsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeGroup = skillGroups[activeIndex];
@@ -150,6 +166,44 @@ export function SkillsSection() {
               className="absolute bottom-[-1px] left-0 h-[3px] w-1/4 bg-[#f2b126] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
               style={{ transform: `translateX(${activeIndex * 100}%)` }}
             />
+          </div>
+
+          <div
+            key={activeIndex}
+            id="skills-panel"
+            role="tabpanel"
+            aria-labelledby={`skills-tab-${activeIndex}`}
+            className="skills-panel-enter grid gap-10 pt-12 md:grid-cols-[minmax(220px,0.8fr)_2fr] md:gap-16 md:pt-16">
+            <div className="flex flex-col justify-center border-b border-[#27303d] pb-8 md:border-b-0 md:border-r md:pb-0 md:pr-12">
+              <p className="mb-5 text-sm font-medium tracking-[0.25em] text-[#f2b126]">
+                {String(activeIndex + 1).padStart(2, "0")}{" "}
+                <span className="px-1 text-[#aab4c3]">/</span>{" "}
+                <span className="text-[#8994a4]">04</span>
+              </p>
+              <h3 className="font-serif text-4xl leading-tight tracking-[-0.035em] md:text-5xl">
+                {activeGroup.title}
+              </h3>
+              <p className="mt-5 max-w-sm text-base leading-relaxed text-[#aab4c3] md:text-lg">
+                {activeGroup.description}
+              </p>
+              <div aria-hidden="true" className="mt-10 flex items-center">
+                <span className="h-px w-24 bg-gradient-to-r from-[#aab4c3]/80 to-[#aab4c3]/20" />
+                <span className="size-2 rounded-full bg-[#f2b126]" />
+              </div>
+            </div>
+
+            <ul className="grid grid-cols-2 content-center gap-x-5 gap-y-10 sm:grid-cols-3 md:grid-cols-4 md:gap-x-7 md:gap-y-12">
+              {activeGroup.skills.map((skill) => (
+                <li
+                  key={skill.name}
+                  className="flex min-w-0 flex-col items-center gap-3 text-center text-[#d2d8e1]">
+                  <SkillMark skill={skill} />
+                  <span className="text-sm leading-snug md:text-base">
+                    {skill.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
