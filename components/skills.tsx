@@ -9,7 +9,6 @@ import {
   GitBranch,
   Globe2,
   Layers3,
-  PanelsTopLeft,
   Server,
   Smartphone,
   Workflow,
@@ -54,7 +53,7 @@ const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Data & Tools",
     description: "The tools and workflows that bring projects together.",
     skills: [
       { name: "PostgreSQL", icon: Database },
@@ -128,6 +127,7 @@ export function SkillsSection() {
           </p>
         </header>
 
+        {/* Skill category tabs – allow users to switch between skill groups */}
         <div className="relative md:ml-[12%]">
           <div
             role="tablist"
