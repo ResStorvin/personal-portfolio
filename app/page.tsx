@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/about";
 import { ContactSection } from "@/components/contact";
+import { SubmitForm } from "@/components/form";
 import { HeroSection } from "@/components/hero";
 import { SkillsSection } from "@/components/skills";
 import { WorkSection } from "@/components/work";
@@ -13,6 +14,7 @@ export default function page() {
       </div>
       <WorkSection />
       <SkillsSection />
+      <SubmitForm />
       <ContactSection />
     </main>
   );
