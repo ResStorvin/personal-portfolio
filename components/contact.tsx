@@ -1,21 +1,48 @@
+const contactEmail = "zwezaynyi@gmail.com";
+
+const contactLinks = [
+  {
+    label: "Email",
+    value: contactEmail,
+    href: `mailto:${contactEmail}`,
+  },
+  {
+    label: "Instagram",
+    value: "@Coady",
+    href: "https://www.instagram.com/rexstorvin/",
+  },
+  {
+    label: "LinkedIn",
+    value: "@zwezaynyi",
+    href: "https://www.linkedin.com/in/zwezaynyiakacody/",
+  },
+];
+
 export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative z-10 flex min-h-screen w-full items-center justify-center bg-gray-950 px-6 py-32">
-      <div className="max-w-3xl text-center">
-        <h2 className="mb-6 font-serif text-5xl font-light text-white">
+      aria-labelledby="contact-title"
+      className="relative z-10 scroll-mt-28 bg-[#070b12] px-6 py-24 text-[#f4f3f1] md:px-12 md:py-32">
+      <div className="mx-auto max-w-[1080px]">
+        <h2 id="contact-title" className="sr-only">
           Contact Me
         </h2>
-        <p className="mb-8 text-lg text-gray-400">
-          I&apos;d love to hear from you. Let&apos;s create something amazing
-          together.
-        </p>
-        <a
-          href="mailto:your-email@example.com"
-          className="inline-block rounded-full bg-white px-8 py-3 font-medium text-gray-900 transition-colors duration-200 hover:bg-gray-100">
-          Send me an email
-        </a>
+
+        <div className="grid gap-x-10 gap-y-12 border-b border-[#26303e] pb-12 md:grid-cols-3 md:gap-y-16 md:pb-16">
+          {contactLinks.map((item) => (
+            <div key={item.label}>
+              <h3 className="mb-5 text-lg font-semibold">{item.label}</h3>
+              <a
+                href={item.href}
+                target={item.href.startsWith("https") ? "_blank" : undefined}
+                rel={item.href.startsWith("https") ? "noreferrer" : undefined}
+                className="font-serif text-[clamp(1.25rem,2.4vw,2rem)] leading-tight tracking-[-0.035em] text-white transition-colors hover:text-[#f2b126] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2b126]">
+                {item.value}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
