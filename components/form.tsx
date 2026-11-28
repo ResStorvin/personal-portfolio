@@ -22,9 +22,9 @@ export function SubmitForm() {
         </div>
 
         <form
-          action={`mailto:${contactEmail}?subject=${encodeURIComponent("Portfolio contact")}`}
+          action="https://formspree.io/f/myewawgy"
           method="post"
-          encType="text/plain"
+          // encType="text/plain"
           className="grid gap-x-7 gap-y-6">
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
@@ -70,10 +70,6 @@ export function SubmitForm() {
             />
           </div>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-md text-sm leading-relaxed text-[#8793a5]">
-              Sending opens your email app to deliver the message. Automatic
-              website delivery needs an email service.
-            </p>
             <button
               type="submit"
               className="shrink-0 border-b border-[#f2b126] pb-2 text-sm font-medium tracking-[0.16em] text-[#f2b126] transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2b126]">

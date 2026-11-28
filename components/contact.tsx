@@ -23,7 +23,7 @@ const contactLinks = [
   },
   {
     label: "Resume",
-    value: "Download Resume",
+    value: "Download Resume →",
     href: "/Zwezaynyi.pdf",
   },
 ];
