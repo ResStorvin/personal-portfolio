@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Zwezaynyi Full Stack Developer",
   description: "Welcome to my portfolio",
 };
 

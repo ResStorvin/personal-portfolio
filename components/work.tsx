@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const projects = [
   {
     number: "01",
-    status: "Currently building",
+    status: "You're Currently Watching this",
     title: "Portfolio",
     description:
       "My personal portfolio website built with Next.js, Typescript and Tailwind CSS, A space to showcase my journey skills and the projects I’m working on.",
@@ -88,7 +90,7 @@ export function WorkSection() {
                   <ProjectTags tags={featured.tags} />
                 </div>
               </div>
-              <div className="overflow-hidden rounded-xl border border-[#294261] bg-[#0D1B2C] p-2">
+              {/* <div className="overflow-hidden rounded-xl border border-[#294261] bg-[#0D1B2C] p-2">
                 <div className="flex aspect-4/3 flex-col rounded-lg border border-[#294261] bg-[#071321] p-4">
                   <div className="flex items-center justify-between border-b border-[#294261] pb-3 font-mono text-[8px] uppercase tracking-[0.16rem] text-[#CFA50E]">
                     <span>Your Portfolio</span>
@@ -104,12 +106,20 @@ export function WorkSection() {
                     <span className="mt-5 h-px w-16 bg-[#CFA50E]" />
                   </div>
                 </div>
+              </div> */}
+              <div className="overflow-hidden rounded-xl border border-[#294261] bg-[#0D1B2C] p-2">
+                <div className="relative aspect-4/3 overflow-hidden rounded-lg">
+                  <Image
+                    src="/herosection.png"
+                    alt="My portfolio hero photo"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
             </div>
             <div className="mt-10 flex flex-wrap gap-8 font-mono text-xs uppercase tracking-[0.18em] text-[#CFA50E]">
-              <span>
-                View live site <span className="ml-2 text-lg">→</span>
-              </span>
               <a
                 href="https://github.com/ResStorvin/personal-portfolio"
                 target="_blank"
