@@ -5,7 +5,7 @@ export function SubmitForm() {
     <section
       aria-labelledby="rest-title"
       className="bg-[#070b12] px-6 py-20 text-[#f4f3f1] md:px-12 md:py-28">
-      <div className="mx-auto grid max-w-[1080px] gap-10 border-t border-[#26303e] pt-12 md:grid-cols-[minmax(220px,0.75fr)_2fr] md:gap-16 md:pt-16">
+      <div className="mx-auto grid max-w-[1080px] gap-10  pt-12 md:grid-cols-[minmax(220px,0.75fr)_2fr] md:gap-16 md:pt-16">
         <div>
           <p className="mb-4 text-sm font-medium tracking-[0.24em] text-[#f2b126]">
             GET IN TOUCH
